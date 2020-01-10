@@ -1,0 +1,21 @@
+{
+  "name": "markdown-gutenberg-block",
+  "version": "0.1.0",
+  "description": "Adds a Gutenberg block so you can use markdown and the SimpleMDE editor",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error:no test specified\" && exit 1"
+  },
+  "author": "Ryan Nutt",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-notify": "^0.4.5",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "^1.0.3"
+  }
+}
