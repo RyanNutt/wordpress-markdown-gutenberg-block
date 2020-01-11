@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         opts: {
             /* Filename of the compiled JavaScript file */
-            jsName: 'project',
+            jsName: 'markdown-block',
 
             /* Filename of the compiled CSS file */
             cssName: 'style',
