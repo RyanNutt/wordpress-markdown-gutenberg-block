@@ -48,10 +48,11 @@ class MarkDownBlock
           );
 
           wp_register_style('aelora-simplemde', 'https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css', [], null);
+          wp_register_style('aelora-markdown', plugins_url('css/dist/markdown-block.min.css', __FILE__), [], self::version());
 
           register_block_type('aelora/markdown-block', [
                'editor_script' => ['aelora-markdown'],
-               'editor_style' => ['aelora-simplemde'],
+               'editor_style' => ['aelora-simplemde', 'aelora-markdown'],
                'render_callback' => [self::class, 'render_callback']
           ]);
      }

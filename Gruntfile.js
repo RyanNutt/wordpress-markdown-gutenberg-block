@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             jsName: 'markdown-block',
 
             /* Filename of the compiled CSS file */
-            cssName: 'style',
+            cssName: 'markdown-block',
             companyName: 'Ryan Nutt',
             companySite: 'https://www.nutt.net',
             langDomain: 'markdown-gutenberg-block',
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/dist/<%= opts.cssName %>.min.css': 'css/src/<%= opts.cssName %>.scss'
+                    'css/dist/markdown-block.min.css': 'css/src/markdown-block.scss'
                 }
             }
         },

@@ -1,0 +1,34 @@
+/**
+ * Base SASS file for Markdown Gutenberg block plugin
+ */
+
+div {
+    [data-type="aelora/markdown-block"] {
+
+        &.is-selected,
+        &.is-typing {
+            div[data-markdown="editor"] {
+                display: block;
+            }
+
+            div[data-markdown="preview"] {
+                display: none;
+            }
+        }
+
+        div[data-markdown="preview"] {
+            display: block;
+        }
+
+        div[data-markdown="editor"] {
+            display: none;
+            width: 100%;
+            font-family: monospace;
+            font-size: 110%;
+
+            textarea: {
+                display: none;
+            }
+        }
+    }
+}
