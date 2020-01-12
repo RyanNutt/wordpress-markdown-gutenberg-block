@@ -64,7 +64,7 @@ class MarkDownBlock
       */
      public static function render_callback($props)
      {
-          return '<p>This will eventually be a formatted version of the markdown...</p>';
+          return '<div>' . $props['html'] . '</div>';
      }
 
      /**

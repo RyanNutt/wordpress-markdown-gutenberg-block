@@ -18,16 +18,23 @@ div {
 
         div[data-markdown="preview"] {
             display: block;
+
+            * {
+                background: transparent !important;
+            }
         }
 
         div[data-markdown="editor"] {
             display: none;
             width: 100%;
             font-family: monospace;
-            font-size: 110%;
 
             textarea: {
                 display: none;
+            }
+
+            * {
+                background: transparent !important;
             }
         }
     }
