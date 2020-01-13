@@ -77,6 +77,7 @@
                         */
                         jQuery('div[data-markdown-preview="' + props.clientId + '"]').html(props.attributes.html);
 
+                        /* Load the contents into properties for the block */
                         simplemde.codemirror.on("change", function () {
                             var renderedHTML = simplemde.options.previewRender(simplemde.value());
                             props.setAttributes({
@@ -84,6 +85,20 @@
                                 html: renderedHTML
                             });
                             jQuery('div[data-markdown-preview="' + props.clientId + '"]').html(renderedHTML);
+                        });
+
+                        /* Watch for changes in block class to see if we need to refresh the codemirror */
+                        var observer = new MutationObserver(function (mutationsList) {
+                            console.info('observer has fired');
+                            var el = jQuery('div#block-' + props.clientId);
+                            if (el.hasClass('is-selected')) {
+                                simplemde.codemirror.refresh();
+                            }
+                        });
+                        observer.observe(jQuery('div#block-' + props.clientId)[0], {
+                            attributes: true,
+                            attributeOldValue: true,
+                            attributeFilter: ['class']
                         });
                     }
                 });
