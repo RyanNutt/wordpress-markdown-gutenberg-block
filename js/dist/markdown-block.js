@@ -89,7 +89,6 @@
 
                         /* Watch for changes in block class to see if we need to refresh the codemirror */
                         var observer = new MutationObserver(function (mutationsList) {
-                            console.info('observer has fired');
                             var el = jQuery('div#block-' + props.clientId);
                             if (el.hasClass('is-selected')) {
                                 simplemde.codemirror.refresh();

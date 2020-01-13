@@ -4,7 +4,7 @@
  * Plugin Name:         Markdown Gutenberg Block
  * Plugin URI:          https://github.com/ryannutt/wordpress-markdown-gutenberg-block/
  * Description:         Adds a block to WordPress where you can use the SimpleMDE editor to write posts using Markdown
- * Version:             0.1.0
+ * Version:           0.1.1
  * Requires at least:   5.2
  * Requires PHP:        7.2
  * Author:              Ryan Nutt

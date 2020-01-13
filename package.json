@@ -1,6 +1,6 @@
 {
   "name": "markdown-gutenberg-block",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds a Gutenberg block so you can use markdown and the SimpleMDE editor",
   "main": "Gruntfile.js",
   "scripts": {
