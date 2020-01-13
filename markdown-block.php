@@ -21,6 +21,8 @@ MarkDownBlock::init();
 
 class MarkDownBlock
 {
+     private static $version = null;
+
      /**
       * Initializes the plugin
       */
@@ -72,10 +74,14 @@ class MarkDownBlock
       */
      public static function version()
      {
-          $json = json_decode(file_get_contents(__DIR__ . '/package.json'), true);
-          if (empty($json) || empty($json['version'])) {
-               return false;
+          if (self::$version === null) {
+               $json = json_decode(file_get_contents(__DIR__ . '/package.json'), true);
+               if (empty($json) || empty($json['version'])) {
+                    self::$version = false;
+               } else {
+                    self::$version = $json['version'];
+               }
           }
-          return $json['version'];
+          return self::$version;
      }
 }
